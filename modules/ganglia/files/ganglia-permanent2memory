@@ -1,0 +1,1 @@
+rsync -a --delete /var/lib/ganglia-p/rrds /var/lib/ganglia/
