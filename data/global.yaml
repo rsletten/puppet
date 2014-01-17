@@ -1,5 +1,5 @@
 ---
-nagiosconsole: '10.40.20.43'
+nagserver: '10.40.20.43'
 csc:
   csc-mn00.saas.local:
     ip: 10.40.20.30
