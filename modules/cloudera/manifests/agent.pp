@@ -15,7 +15,6 @@ class cloudera::agent::config {
     group   => 'root',
     mode    => 0644,
     source  => "puppet:///modules/cloudera/config.ini",
-    require => Class["cloudera::agent::package"],
     notify  => Class["cloudera::agent::service"],
   }
 }
