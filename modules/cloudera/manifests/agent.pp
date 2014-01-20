@@ -4,7 +4,6 @@ class cloudera::agent::service {
     hasstatus  => true,
     hasrestart => true,
     enable     => true,
-    require    => Class["cloudera::agent::package"],
   }
 }
 
