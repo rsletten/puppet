@@ -8,6 +8,7 @@ node 'hadoop' {
   import 'nrpe.pp'
   import 'sshkey.pp'
   import 'hostsfile.pp'
+  import 'datazero.pp'
 }
 
 node 'common' {
