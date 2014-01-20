@@ -41,9 +41,11 @@ node 'csc-wn03.saas.local' inherits hadoop {
 }
 
 node 'csc-wn04.saas.local' inherits hadoop {
+  include cloudera::agent
 }
 
 node 'csc-wn05.saas.local' inherits hadoop {
+  include cloudera::agent
 }
 
 node 'csc-wn06.saas.local' inherits hadoop {
