@@ -1,5 +1,6 @@
 ---
 nagserver: '10.40.20.43'
+clouderamanager: '10.40.20.30'
 csc:
   csc-mn00.saas.local:
     ip: 10.40.20.30
