@@ -12,10 +12,9 @@
 #
 class cloudera::agent {
   class { '::cloudera::agent::package': } ->
-  class { '::cloudera::agent::service': } ->
   class { '::cloudera::agent::config': } ->
+  class { '::cloudera::agent::service': } ->
   Class['cloudera::agent']
-
 }
 
 class hadoopgroups::virtual {
