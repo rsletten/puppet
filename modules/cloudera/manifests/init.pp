@@ -17,6 +17,32 @@ class cloudera::agent {
   Class['cloudera::agent']
 }
 
+class clouderascmuser::virtual {
+  @group { 'cloudera-scm':
+    gid    => '999',
+    ensure => present
+  }
+}
+
+class clouderascmgroup::virtual {
+  @user { 'cloudera-scm':
+    uid        => '999',
+    gid        => '999',
+    shell      => '/sbin/nologin',
+    home       => '/var/run/cloudera-scm-server',
+    managehome => true,
+    comment    => 'Cloudera Manager',
+    ensure     => present
+  } 
+}
+
+class cloudera::clouderascmaccount {
+  require clouderascmgroup::virtual
+  require clouderascmuser::virtual
+  realize(Group['cloudera-scm'])
+  realize(User['cloudera-scm'])
+}
+
 class hadoopgroups::virtual {
   @group { 'hue':
     gid    => '1000',
