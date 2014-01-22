@@ -17,33 +17,16 @@ class cloudera::agent {
   Class['cloudera::agent']
 }
 
-class clouderascmuser::virtual {
-  @group { 'cloudera-scm':
-    gid    => '999',
-    ensure => present
-  }
-}
-
-class clouderascmgroup::virtual {
-  @user { 'cloudera-scm':
-    uid        => '999',
-    gid        => '999',
-    shell      => '/sbin/nologin',
-    home       => '/var/run/cloudera-scm-server',
-    managehome => true,
-    comment    => 'Cloudera Manager',
-    ensure     => present
-  } 
-}
-
-class cloudera::clouderascmaccount {
-  require clouderascmgroup::virtual
-  require clouderascmuser::virtual
-  realize(Group['cloudera-scm'])
-  realize(User['cloudera-scm'])
+class cloudera::manager {
+  class { '::cloudera::manager::package': } ->
+  Class['cloudera::manager']
 }
 
 class hadoopgroups::virtual {
+   @group { 'cloudera-scm':
+    gid    => '999',
+    ensure => present
+  }
   @group { 'hue':
     gid    => '1000',
     ensure => present
@@ -118,6 +101,15 @@ class hadoopgroups::virtual {
 }
 
 class hadoopusers::virtual {
+  @user { 'cloudera-scm':
+    uid        => '999',
+    gid        => '999',
+    shell      => '/sbin/nologin',
+    home       => '/var/run/cloudera-scm-server',
+    managehome => true,
+    comment    => 'Cloudera Manager',
+    ensure     => present
+  }
   @user { 'hue':
     uid        => '1000',
     gid        => '1000',
@@ -262,6 +254,7 @@ class hadoopusers::virtual {
 class cloudera::hadoopaccounts {
   require hadoopgroups::virtual
   require hadoopusers::virtual
+  realize(Group['cloudera-scm'])
   realize(Group['hue'])
   realize(Group['hbase'])
   realize(Group['oozie'])
@@ -277,6 +270,7 @@ class cloudera::hadoopaccounts {
   realize(Group['impala'])
   realize(Group['solr'])
   realize(Group['hadoop'])
+  realize(User['cloudera-scm'])
   realize(User['hue'])
   realize(User['hbase'])
   realize(User['oozie'])

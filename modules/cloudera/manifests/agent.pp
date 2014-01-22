@@ -23,4 +23,10 @@ class cloudera::agent::package {
   package { "cloudera-manager-agent":
     ensure => present,
   }
+  package { "cloudera-manager-daemons":
+    ensure => present,
+  }
+  package { "jdk":
+    ensure => present,
+  }
 }

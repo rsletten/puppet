@@ -12,7 +12,7 @@ node 'hadoop' {
   import 'thp.pp'
 }
 
-node 'common' {
+node 'nonhadoop' {
   import 'ntpconfig.pp'
   import 'cups.pp'
   import 'nrpe.pp'
@@ -21,6 +21,7 @@ node 'common' {
 }
 
 node 'csc-mn00.saas.local' inherits hadoop {
+  include cloudera::manager
 }
 
 node 'csc-mn01.saas.local' inherits hadoop {
