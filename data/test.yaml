@@ -1,0 +1,10 @@
+---
+nagserver: '192.168.3.10'
+clouderamanager: '192.168.3.10'
+csc:
+  testcentos3.camstar.local:
+    ip: 192.168.3.75
+    role: Master
+  testcentos4.camstar.local:
+    ip: 192.168.3.76
+    role: Worker
