@@ -14,6 +14,7 @@ class ganglia::manager {
     owner   => 'root',
     group   => 'root',
     mode    => 0644,
+    require => Class['ganglia::manager::packages'],
     notify  => Class['ganglia::manager::service'],
     source  => "puppet:///modules/ganglia/gmetad.conf",
   }
