@@ -1,5 +1,6 @@
 class cloudera::manager::package {
-  require Class['cloudera::hadoopaccounts'],
+  require cloudera::hadoopaccounts
+
   package { "cloudera-manager-server":
     ensure => present,
   }
@@ -11,5 +12,23 @@ class cloudera::manager::package {
   }
   package { "cloudera-manager-daemons":
     ensure => present,
+  }
+}
+
+class cloudera::manager::service {
+  service { "cloudera-scm-server-db":
+    ensure     => running,
+    hasstatus  => true,
+    hasrestart => true,
+    enable     => true,
+    require    => Class["cloudera::manager::package"],
+  }
+
+  service { "cloudera-scm-server":
+    ensure     => running,
+    hasstatus  => true,
+    hasrestart => true,
+    enable     => true,
+    require    => Service["cloudera-scm-server-db"], 
   }
 }
