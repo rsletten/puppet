@@ -19,6 +19,7 @@ class cloudera::agent {
 
 class cloudera::manager {
   class { '::cloudera::manager::package': } ->
+  class { '::cloudera::manager::service': } ->
   Class['cloudera::manager']
 }
 

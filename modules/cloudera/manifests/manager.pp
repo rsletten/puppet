@@ -13,6 +13,9 @@ class cloudera::manager::package {
   package { "cloudera-manager-daemons":
     ensure => present,
   }
+  package { "jdk":
+    ensure => present,
+  }
 }
 
 class cloudera::manager::service {
