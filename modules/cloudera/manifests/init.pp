@@ -25,11 +25,12 @@ class cloudera::manager {
 
 class hadoopgroups::virtual {
    @group { 'cloudera-scm':
-    gid    => '999',
+    gid    => '1000',
     ensure => present
   }
+
   @group { 'hue':
-    gid    => '1000',
+    gid    => '1014',
     ensure => present
   }
 
@@ -87,33 +88,37 @@ class hadoopgroups::virtual {
     gid    => '1011',
     ensure => present
   }
+
   @group { 'impala':
     gid    => '1012',
     ensure => present,
   }
+
   @group { 'solr':
     gid    => '1013',
     ensure => present
   }
+
   @group { 'hadoop':
-    gid     => '1014',
+    gid     => '1015',
     ensure  => present,
   }
 }
 
 class hadoopusers::virtual {
   @user { 'cloudera-scm':
-    uid        => '999',
-    gid        => '999',
+    uid        => '1000',
+    gid        => '1000',
     shell      => '/sbin/nologin',
     home       => '/var/run/cloudera-scm-server',
     managehome => true,
     comment    => 'Cloudera Manager',
     ensure     => present
   }
+
   @user { 'hue':
-    uid        => '1000',
-    gid        => '1000',
+    uid        => '1014',
+    gid        => '1014',
     shell      => '/bin/false',
     home       => '/usr/share/hue',
     managehome => true,
