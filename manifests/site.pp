@@ -1,3 +1,5 @@
+import 'testnodes.pp'
+
 node 'hadoop' {
   include cloudera::hadoopaccounts
   include ganglia
