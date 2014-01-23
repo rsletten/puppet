@@ -1,7 +1,13 @@
+$master = hiera('puppetmaster')
+host { 'puppet':
+  ensure => present,
+  ip     => '$master',
+  target => '/etc/hosts'
+}
 host { 'csc-sn03.saas.local':
   ensure       => present,
   ip           => '10.40.20.43',
-  host_aliases => [ 'csc-sn03', 'puppet', 'build' ],
+  host_aliases => [ 'csc-sn03', 'build' ],
   target       => '/etc/hosts'
 }
 host { 'csc-mn00.saas.local':
