@@ -8,12 +8,13 @@ class cloudera::agent::service {
 }
 
 class cloudera::agent::config {
+  $manager = hiera('clouderamanager')
   file { "/etc/cloudera-scm-agent/config.ini":
     ensure  => present,
     owner   => 'root',
     group   => 'root',
     mode    => 0644,
-    source  => "puppet:///modules/cloudera/config.ini",
+    content => template('cloudera/config.ini.erb'),
     notify  => Class["cloudera::agent::service"],
     require => Class["cloudera::agent::package"],
   }
