@@ -23,7 +23,7 @@ node 'nonhadoop' {
 }
 
 node 'csc-mn00.saas.local' inherits hadoop {
-  include cloudera::manager
+  include cloudera::agent
 }
 
 node 'csc-mn01.saas.local' inherits hadoop {

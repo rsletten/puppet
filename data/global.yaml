@@ -1,6 +1,6 @@
 ---
 nagios: '10.40.20.43'
-clouderamanager: '10.40.20.30'
+clouderamanager: '10.40.20.43'
 puppetmaster: '10.40.20.43'
 csc:
   csc-mn00.saas.local:
