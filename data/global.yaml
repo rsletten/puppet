@@ -12,6 +12,15 @@ csc:
   csc-mn02.saas.local:
     ip: 10.40.20.32
     role: Master
+  csc-sn00.saas.local:
+    ip: 10.40.20.40
+    role: Service
+  csc-sn01.saas.local:
+    ip: 10.40.20.41
+    role: Service
+  csc-sn02.saas.local:
+    ip: 10.40.20.41
+    role: Service
   csc-sn03.saas.local:
     ip: 10.40.20.43
     role: Service
