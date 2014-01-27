@@ -12,6 +12,7 @@ node 'hadoop' {
   import 'hostsfile.pp'
   import 'datazero.pp'
   import 'thp.pp'
+  import 'mtu9000.pp'
 }
 
 node 'nonhadoop' {
