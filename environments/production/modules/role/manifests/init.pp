@@ -16,6 +16,7 @@ class role::nonhadoop {
   include profile::ntpconfig
   include profile::rootsshkey
   include profile::hostsfile
+  include ganglia
 }
 
 class role::hadoop inherits role::nonhadoop {
