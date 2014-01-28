@@ -280,3 +280,9 @@ host { 'csc-wn38.saas.local':
   host_aliases => 'csc-wn38',
   target       => '/etc/hosts'
 }
+host { 'csc-jetty-0.saas.local':
+  ensure       => present,
+  ip           => '10.40.20.14',
+  host_aliases => 'csc-jetty-0',
+  target       => '/etc/hosts'
+}

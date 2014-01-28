@@ -12,7 +12,6 @@ node 'hadoop' {
   import 'hostsfile.pp'
   import 'datazero.pp'
   import 'thp.pp'
-  import 'mtu9000.pp'
 }
 
 node 'nonhadoop' {
@@ -193,6 +192,9 @@ node 'csc-wn38.saas.local' inherits hadoop {
 
 node 'csc-sn03.saas.local' {
   include ganglia::manager
+}
+
+node 'csc-jetty-0.saas.local' {
 }
 
 # $interval = 3+fqdn_rand(2)

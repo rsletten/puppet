@@ -141,3 +141,6 @@ csc:
   csc-wn38.saas.local:
     ip: 10.40.20.88
     role: Worker
+  csc-jetty-0.saas.local:
+    ip: 10.40.20.14
+    role: Service
