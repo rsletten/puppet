@@ -1,7 +1,7 @@
-node 'testcentos3.camstar.local' inherits hadoop {
-  include cloudera::manager
+node 'testcentos3.camstar.local' {
+  include role::hadoop
 }
 
-node 'testcentos4.camstar.local' inherits hadoop {
-  include cloudera::agent
+node 'testcentos4.camstar.local' {
+  include role::hadoop
 }
