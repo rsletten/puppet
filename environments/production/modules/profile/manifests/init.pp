@@ -128,14 +128,14 @@ class profile::thpnever {
 class profile::hostsfile {
   $master = hiera('puppetmaster')
   host { 'puppet':
-    ensure => present,
+    ensure => absent,
     ip     => $master,
     target => '/etc/hosts'
   }
   host { 'csc-sn03.saas.local':
     ensure       => present,
     ip           => '10.40.20.43',
-    host_aliases => [ 'csc-sn03', 'build' ],
+    host_aliases => [ 'csc-sn03', 'build', 'puppet' ],
     target       => '/etc/hosts'
   }
   host { 'csc-mn00.saas.local':
