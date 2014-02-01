@@ -11,6 +11,16 @@
 # Sample Usage:
 #
 
+class profile::puppetmaster {
+  $pupmaster = hiera('puppetmaster')
+  file { "/etc/puppet/puppet.conf":
+    owner   => "root",
+    group   => "root",
+    mode    => 0644,
+    content => template('profile/puppet.conf.erb'),
+  }
+}
+
 class profile::cups {
   service { 'cups':
       ensure   => stopped,
@@ -20,10 +30,10 @@ class profile::cups {
 
 class profile::datazero {
   file { "/data0":
-    ensure      => directory,
-    mode      => 0755,
-    owner   => "root",
-    group => "root",
+    ensure => directory,
+    mode   => 0755,
+    owner  => "root",
+    group  => "root",
   }
 }
 
@@ -86,7 +96,7 @@ class profile::nrpe {
     mode   => 0600,
     source => "puppet:///files/nrpe.cfg"
   }
-
+:1
   file { "/usr/lib64/nagios/plugins/check_mem.sh":
     ensure => present,
     owner  => 'nagios',
@@ -126,7 +136,6 @@ class profile::thpnever {
 }
 
 class profile::hostsfile {
-  $master = hiera('puppetmaster')
   host { 'puppet':
     ensure => absent,
     ip     => $master,
@@ -135,7 +144,7 @@ class profile::hostsfile {
   host { 'csc-sn03.saas.local':
     ensure       => present,
     ip           => '10.40.20.43',
-    host_aliases => [ 'csc-sn03', 'build', 'puppet' ],
+    host_aliases => [ 'csc-sn03', 'build' ],
     target       => '/etc/hosts'
   }
   host { 'csc-mn00.saas.local':
