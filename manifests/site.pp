@@ -169,10 +169,16 @@ node 'csc-wn38.saas.local' {
 }
 
 node 'csc-sn03.saas.local' {
-  include ganglia::manager
 }
 
 node 'csc-jetty-0.saas.local' {
   include role::nonhadoop
 }
 
+node 'stack0.saas.local' {
+  include role::nonhadoop
+}
+
+node 'stack1.saas.local' {
+  include role::nonhadoop
+}
