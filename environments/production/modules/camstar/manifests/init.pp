@@ -37,13 +37,9 @@
 #
 class camstar::users {
 
+  # Rob Sletten
   @group { 'rsletten':
     gid    => '2000',
-    ensure => present,
-  }
-
-  @group { 'jthomas':
-    gid    => '2001',
     ensure => present,
   }
 
@@ -53,8 +49,15 @@ class camstar::users {
     shell      => '/bin/bash',
     home       => '/home/rsletten',
     managehome => true,
+    password   => '$1$pwujD8if$I0Nq2kBEFZQ8nBnpMXDDW/',
     comment    => 'Rob Sletten',
     ensure     => present,
+  }
+
+  # James Thomas
+  @group { 'jthomas':
+    gid    => '2001',
+    ensure => present,
   }
 
   @user { 'jthomas':
@@ -63,7 +66,76 @@ class camstar::users {
     shell      => '/bin/bash',
     home       => '/home/jthomas',
     managehome => true,
+    password   => '$1$d2NPLbi8$M/vGY8S4rJ1A4spTMlZFU.',
     comment    => 'James Thomas',
+    ensure     => present,
+  }
+
+  # Kevin Farmer
+  @group { 'kfarmer':
+    gid    => '2002',
+    ensure => present,
+  }
+
+  @user { 'kfarmer':
+    uid        => '2002',
+    gid        => '2002',
+    shell      => '/bin/bash',
+    home       => '/home/kfarmer',
+    managehome => true,
+    password   => '$1$SrOicrFj$Wn8XVsnmibsPaUM8NsyQB0',
+    comment    => 'Kevin Farmer',
+    ensure     => present,
+  }
+
+  # Dan Maloney
+  @group { 'dmaloney':
+    gid    => '2003',
+    ensure => present,
+  }
+
+  @user { 'dmaloney':
+    uid        => '2003',
+    gid        => '2003',
+    shell      => '/bin/bash',
+    home       => '/home/dmaloney',
+    managehome => true,
+    password   => '$1$SrOicrFj$Wn8XVsnmibsPaUM8NsyQB0',
+    comment    => 'Dan Maloney',
+    ensure     => present,
+  }
+
+  # PenCheng
+  @group { 'pcliu':
+    gid    => '2004',
+    ensure => present,
+  }
+
+  @user { 'pcliu':
+    uid        => '2004',
+    gid        => '2004',
+    shell      => '/bin/bash',
+    home       => '/home/pcliu',
+    managehome => true,
+    password   => '$1$SrOicrFj$Wn8XVsnmibsPaUM8NsyQB0',
+    comment    => 'PengCheng Liu',
+    ensure     => present,
+  }
+
+  # Soma
+  @group { 'sseedharalu':
+    gid    => '2005',
+    ensure => present,
+  }
+
+  @user { 'sseedharalu':
+    uid        => '2005',
+    gid        => '2005',
+    shell      => '/bin/bash',
+    home       => '/home/sseedharalu',
+    managehome => true,
+    password   => '$1$SrOicrFj$Wn8XVsnmibsPaUM8NsyQB0',
+    comment    => 'Soma Seedharalu',
     ensure     => present,
   }
 
@@ -73,7 +145,15 @@ class camstar::accounts {
   require camstar::users
   realize(Group['rsletten'])
   realize(Group['jthomas'])
+  realize(Group['kfarmer'])
+  realize(Group['dmaloney'])
+  realize(Group['pcliu'])
+  realize(Group['sseedharalu'])
   realize(User['rsletten'])
   realize(User['jthomas'])
+  realize(User['kfarmer'])
+  realize(User['dmaloney'])
+  realize(User['pcliu'])
+  realize(User['sseedharalu'])
 }
 
