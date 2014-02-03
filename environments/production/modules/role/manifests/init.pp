@@ -12,6 +12,7 @@
 #
 class role::nonhadoop {
   include profile::puppetmaster
+  include profile::rootpass
   include profile::cups
   include profile::nrpe
   include profile::ntpconfig
