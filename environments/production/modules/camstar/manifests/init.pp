@@ -49,7 +49,7 @@ class camstar::users {
     shell      => '/bin/bash',
     home       => '/home/rsletten',
     managehome => true,
-    password   => '$1$pwujD8if$I0Nq2kBEFZQ8nBnpMXDDW/',
+    password   => '$1$kiX8uPDu$/1mym42AJ37dR93SHpAuO0',
     comment    => 'Rob Sletten',
     ensure     => present,
   }
