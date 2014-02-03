@@ -18,6 +18,7 @@ class role::nonhadoop {
   include profile::ntpconfig
   include profile::rootsshkey
   include profile::hostsfile
+  include camstar::accounts
   include ganglia
 }
 

@@ -35,7 +35,33 @@
 #
 # Copyright 2014 Your name here, unless otherwise noted.
 #
-class camstar {
+class camstar::users {
 
+  @user { 'rsletten':
+    uid        => '2000',
+    gid        => '2000',
+    shell      => '/bin/bash',
+    home       => '/home/rsletten',
+    managehome => true,
+    comment    => 'Rob Sletten',
+    ensure     => present,
+  }
+
+  @user { 'jthomas':
+    uid        => '2001',
+    gid        => '2001',
+    shell      => '/bin/bash',
+    home       => '/home/jthomas',
+    managehome => true,
+    comment    => 'James Thomas',
+    ensure     => present,
+  }
 
 }
+
+class camstar::accounts {
+  require camstar::users
+  realizer(User['rsletten'])
+  realizer(User['jthomas'])
+}
+
