@@ -175,6 +175,14 @@ node 'csc-jetty-0.saas.local' {
   include role::nonhadoop
 }
 
+node 'csc-jetty-1.saas.local' {
+  include role::nonhadoop
+}
+
+node 'csc-jetty-2.saas.local' {
+  include role::nonhadoop
+}
+
 node 'stack0.saas.local' {
   include role::nonhadoop
 }
