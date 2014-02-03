@@ -11,6 +11,7 @@
 # Sample Usage:
 #
 class role::nonhadoop {
+  include profile::puppetmaster
   include profile::cups
   include profile::nrpe
   include profile::ntpconfig

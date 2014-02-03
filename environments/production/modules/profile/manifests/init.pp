@@ -96,7 +96,7 @@ class profile::nrpe {
     mode   => 0600,
     source => "puppet:///files/nrpe.cfg"
   }
-:1
+
   file { "/usr/lib64/nagios/plugins/check_mem.sh":
     ensure => present,
     owner  => 'nagios',
