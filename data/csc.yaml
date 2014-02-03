@@ -1,7 +1,7 @@
 ---
 nagios: '10.40.20.43'
 clouderamanager: '10.40.20.43'
-puppetmaster: '10.40.20.43'
+puppetmaster: 'csc-sn03.saas.local'
 csc:
   csc-mn00.saas.local:
     ip: 10.40.20.30
@@ -141,14 +141,35 @@ csc:
   csc-wn38.saas.local:
     ip: 10.40.20.88
     role: Worker
-  csc-jetty-0.saas.local:
-    ip: 10.40.20.14
+  csc-portal-0.csc.saas.local:
+    ip: 10.40.20.10
     role: Service
-  csc-jetty-1.saas.local:
+  csc-portal-1.csc.saas.local:
+    ip: 10.40.20.11
+    role: Service
+  csc-portal-2.csc.saas.local:
+    ip: 10.40.20.12
+    role: Service
+  csc-jetty-0.saas.local:
     ip: 10.40.20.15
     role: Service
-  csc-jetty-2.saas.local:
+  csc-jetty-1.saas.local:
     ip: 10.40.20.16
+    role: Service
+  csc-jetty-2.saas.local:
+    ip: 10.40.20.17
+    role: Service
+  csc-domain-0.csc.saas.local:
+    ip: 10.40.20.20
+    role: Service
+  csc-domain-1.csc.saas.local:
+    ip: 10.40.20.21
+    role: Service
+  csc-sql-0.csc.saas.local:
+    ip: 10.40.20.25
+    role: Service
+  csc-sql-1.csc.saas.local:
+    ip: 10.40.20.26
     role: Service
   stack0.saas.local:
     ip: 10.40.20.100

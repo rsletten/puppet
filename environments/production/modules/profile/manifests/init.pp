@@ -419,20 +419,20 @@ class profile::hostsfile {
   }
   host { 'csc-jetty-0.saas.local':
     ensure       => present,
-    ip           => '10.40.20.14',
+    ip           => '10.40.20.15',
     host_aliases => 'csc-jetty-0',
     target       => '/etc/hosts'
   }
   host { 'csc-jetty-1.saas.local':
     ensure       => present,
-    ip           => '10.40.20.15',
-    host_aliases => 'csc-jetty-0',
+    ip           => '10.40.20.16',
+    host_aliases => 'csc-jetty-1',
     target       => '/etc/hosts'
   }
   host { 'csc-jetty-2.saas.local':
     ensure       => present,
-    ip           => '10.40.20.16',
-    host_aliases => 'csc-jetty-0',
+    ip           => '10.40.20.17',
+    host_aliases => 'csc-jetty-2',
     target       => '/etc/hosts'
   }
 }
