@@ -442,4 +442,46 @@ class profile::hostsfile {
     host_aliases => 'csc-jetty-2',
     target       => '/etc/hosts'
   }
+  host { 'csc-portal-0.csc.saas.local':
+    ensure       => present,
+    ip           => '10.40.20.10',
+    host_aliases => 'csc-portal-0',
+    target       => '/etc/hosts'
+  }
+  host { 'csc-portal-1.csc.saas.local':
+    ensure       => present,
+    ip           => '10.40.20.11',
+    host_aliases => 'csc-portal-1',
+    target       => '/etc/hosts'
+  }
+  host { 'csc-portal-2.csc.saas.local':
+    ensure       => present,
+    ip           => '10.40.20.12',
+    host_aliases => 'csc-portal-2',
+    target       => '/etc/hosts'
+  }
+  host { 'csc-domain-0.csc.saas.local':
+    ensure       => present,
+    ip           => '10.40.20.20',
+    host_aliases => 'csc-domain-0',
+    target       => '/etc/hosts'
+  }
+  host { 'csc-domain-1.csc.saas.local':
+    ensure       => present,
+    ip           => '10.40.20.21',
+    host_aliases => 'csc-domain-1',
+    target       => '/etc/hosts'
+  }
+  host { 'csc-sql-0.csc.saas.local':
+    ensure       => present,
+    ip           => '10.40.20.25',
+    host_aliases => 'csc-sql-0',
+    target       => '/etc/hosts'
+  }
+  host { 'csc-sql-1.csc.saas.local':
+    ensure       => present,
+    ip           => '10.40.20.26',
+    host_aliases => 'csc-sql-1',
+    target       => '/etc/hosts'
+  }
 }
