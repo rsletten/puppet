@@ -37,6 +37,16 @@
 #
 class camstar::users {
 
+  @group { 'rsletten':
+    gid    => '2000',
+    ensure => present,
+  }
+
+  @group { 'jthomas':
+    gid    => '2001',
+    ensure => present,
+  }
+
   @user { 'rsletten':
     uid        => '2000',
     gid        => '2000',
@@ -61,6 +71,8 @@ class camstar::users {
 
 class camstar::accounts {
   require camstar::users
+  realize(Group['rsletten'])
+  realize(Group['jthomas'])
   realize(User['rsletten'])
   realize(User['jthomas'])
 }
