@@ -61,7 +61,7 @@ class camstar::users {
 
 class camstar::accounts {
   require camstar::users
-  realizer(User['rsletten'])
-  realizer(User['jthomas'])
+  realize(User['rsletten'])
+  realize(User['jthomas'])
 }
 
