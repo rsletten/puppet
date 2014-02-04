@@ -36,8 +36,8 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class etchosts {
-  $csc_hosts = hiera('etchosts::csc', {})
-  $falcon = hiera('etchosts::falcon', {})
+  $csc_hosts = hiera_hash('etchosts::csc', {})
+  $falcon_hosts = hiera_hash('etchosts::falcon', {})
 
   file { "etchosts" :
     ensure  => 'present',

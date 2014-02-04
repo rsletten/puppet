@@ -1,15 +1,15 @@
 ---
-etchosts::csc
-  'Name Nodes'
+etchosts::csc:
+  'Name Nodes':
     - '10.40.20.30  csc-mn00.saas.local csc-mn00'
     - '10.40.20.31  csc-mn01.saas.local csc-mn01'
     - '10.40.20.32  csc-mn02.saas.local csc-mn02'
-  'Service Nodes'
+  'Service Nodes':
     - '10.40.20.40  csc-sn00.saas.local csc-sn00'
     - '10.40.20.41  csc-mn01.saas.local csc-sn01'
     - '10.40.20.42  csc-mn02.saas.local csc-sn02'
     - '10.40.20.43  csc-mn03.saas.local csc-sn03'
-  'Data Nodes'
+  'Data Nodes':
     - '10.40.20.50  csc-wn00.saas.local csc-wn00'
     - '10.40.20.51  csc-wn01.saas.local csc-wn01'
     - '10.40.20.52  csc-wn02.saas.local csc-wn02'
@@ -48,7 +48,15 @@ etchosts::csc
     - '10.40.20.85  csc-wn35.saas.local csc-wn35'
     - '10.40.20.86  csc-wn36.saas.local csc-wn36'
     - '10.40.20.87  csc-wn37.saas.local csc-wn37'
-  'Jetty Nodes'
+  'Jetty Nodes':
     - '10.40.20.15  csc-jetty-0.saas.local csc-jetty-0'
     - '10.40.20.16  csc-jetty-1.saas.local csc-jetty-1'
     - '10.40.20.17  csc-jetty-2.saas.local csc-jetty-2'
+#  'Windows Nodes':
+#    - '10.40.20.10  csc-portal-0.csc.saas.local csc-portal-0'
+#    - '10.40.20.11  csc-portal-1.csc.saas.local csc-portal-1'
+#    - '10.40.20.12  csc-portal-2.csc.saas.local csc-portal-2'
+#    - '10.40.20.20  csc-domain-0.csc.saas.local csc-domain-0'
+#    - '10.40.20.21  csc-domain-1.csc.saas.local csc-domain-1'
+#    - '10.40.20.25  csc-sql-0.csc.saas.local csc-sql-0'
+#    - '10.40.20.26  csc-sql-1.csc.saas.local csc-sql-1'

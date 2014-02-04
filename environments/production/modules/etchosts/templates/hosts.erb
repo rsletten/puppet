@@ -10,7 +10,7 @@
 # ## IPv4 and IPv6 localhost aliases
 127.0.0.1       localhost       localhost.localdomain localhost4 localhost4.localdomain4
 ::1     localhost       localhost.localdomain localhost6 localhost6.localdomain6
-<%= ipaddress %> <%= fqdn %>  <%= hostname %>
+<%= @ipaddress %> <%= @fqdn %>  <%= @hostname %>
 
 <% if (!csc_hosts.empty?)  -%>
 ## CSC Host entries

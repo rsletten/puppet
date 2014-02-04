@@ -6,6 +6,7 @@
   - %{clientcert}
   - %{environment}
   - global
+  - etchosts
 
 :yaml:
 # datadir is empty here, so hiera uses its defaults:
