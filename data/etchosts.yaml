@@ -60,6 +60,7 @@ etchosts::csc:
     - '10.40.20.21  csc-domain-1.csc.saas.local csc-domain-1'
     - '10.40.20.25  csc-sql-0.csc.saas.local csc-sql-0'
     - '10.40.20.26  csc-sql-1.csc.saas.local csc-sql-1'
+    - '10.40.20.28  csc-sql-2.csc.saas.local csc-sql-2'
 etchosts::falcon:
   'Name Nodes':
     - '10.40.14.30  falcon-mn00.saas.local falcon-mn00'
