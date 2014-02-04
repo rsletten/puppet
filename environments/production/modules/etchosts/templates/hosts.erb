@@ -1,3 +1,4 @@
+## <%= puppetheader %>
 # /etc/hosts: Local Host Database
 # #
 # # This file describes a number of aliases-to-address mappings for the for
@@ -24,7 +25,7 @@
 <% end -%>
 
 <% if (!falcon_hosts.empty?)  -%>
-## Falcon Host Entries
+## Falcon Host entries
 <% falcon_hosts.sort.each do |key,val| -%>
 
 # <%= key %>
@@ -33,3 +34,4 @@
 <% end -%>
 <% end -%>
 <% end -%>
+

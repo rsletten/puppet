@@ -11,13 +11,13 @@
 # Sample Usage:
 #
 class role::nonhadoop {
+  include etchosts
   include profile::puppetmaster
   include profile::rootpass
   include profile::cups
   include profile::nrpe
   include profile::ntpconfig
   include profile::rootsshkey
-  include profile::hostsfile
   include camstar::accounts
   include ganglia
 }

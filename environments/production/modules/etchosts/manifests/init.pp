@@ -38,10 +38,11 @@
 class etchosts {
   $csc_hosts = hiera_hash('etchosts::csc', {})
   $falcon_hosts = hiera_hash('etchosts::falcon', {})
+  $puppetheader = hiera('puppetheader', 'Managed by Puppet')
 
   file { "etchosts" :
     ensure  => 'present',
-    path    => '/tmp/hosts',
+    path    => '/etc/hosts',
     content => template('etchosts/hosts.erb'),
     owner   => 'root',
     group   => 'root',
