@@ -139,6 +139,23 @@ class camstar::users {
     ensure     => present,
   }
 
+  # Kat
+  @group { 'kdevalk':
+    gid    => '2006',
+    ensure => present,
+  }
+
+  @user { 'kdevalk':
+    uid        => '2006',
+    gid        => '2006',
+    shell      => '/bin/bash',
+    home       => '/home/kdevalk',
+    managehome => true,
+    password   => '$1$SrOicrFj$Wn8XVsnmibsPaUM8NsyQB0',
+    comment    => 'Kathleen Devalk',
+    ensure     => present,
+  }
+
 }
 
 class camstar::accounts {
@@ -149,11 +166,13 @@ class camstar::accounts {
   realize(Group['dmaloney'])
   realize(Group['pcliu'])
   realize(Group['sseedharalu'])
+  realize(Group['kdevalk'])
   realize(User['rsletten'])
   realize(User['jthomas'])
   realize(User['kfarmer'])
   realize(User['dmaloney'])
   realize(User['pcliu'])
   realize(User['sseedharalu'])
+  realize(User['kdevalk'])
 }
 
