@@ -36,8 +36,8 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class jetty {
-  class { '::jetty::user': } ->
   class { '::jetty::home': } ->
+  class { '::jetty::user': } ->
   class { '::jetty::app': } ->
   Class ['jetty']
 }
@@ -53,7 +53,7 @@ class jetty::user {
     uid        => '3000',
     gid        => '3000',
     shell      => '/bin/bash',
-    home       => '/webservices/jetty',
+    home       => '/webservices/jettyhome',
     managehome => 'true',
     comment    => 'Jetty Service Account',
     ensure     => 'present',
@@ -67,13 +67,11 @@ class jetty::home {
 
   file { '/webservices':
     ensure => 'directory',
-    owner  => 'cscprod',
-    group  => 'cscprod',
     mode   => '0755',
   }
 }
 
-class jetty:app {
+class jetty::app {
 
   package { 'jdk':
     ensure => 'present',
