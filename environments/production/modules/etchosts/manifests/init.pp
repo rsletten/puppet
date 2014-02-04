@@ -36,6 +36,16 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class etchosts {
+  $csc_hosts = hiera('etchosts::csc', {})
+  $falcon = hiera('etchosts::falcon', {})
 
+  file { "etchosts" :
+    ensure  => 'present',
+    path    => '/tmp/hosts',
+    content => template('etchosts/hosts.erb'),
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0644',
+  }
 
 }
