@@ -83,7 +83,7 @@ class camstar::users {
     shell      => '/bin/bash',
     home       => '/home/kfarmer',
     managehome => true,
-    password   => '$1$SrOicrFj$Wn8XVsnmibsPaUM8NsyQB0',
+    password   => '$6$EadLCF4d$qytK78zmIRFcIto3MoEnK07HRIxKv1R80Ul21w6GULRjEQOujZ5Gos2FzguSiz8zJi/SiL/VSL.NixgttLASW/',
     comment    => 'Kevin Farmer',
     ensure     => present,
   }
@@ -100,7 +100,7 @@ class camstar::users {
     shell      => '/bin/bash',
     home       => '/home/dmaloney',
     managehome => true,
-    password   => '$1$SrOicrFj$Wn8XVsnmibsPaUM8NsyQB0',
+    password   => '$6$WVQaRPE6$VxEEk09LlhnywOwd8xWzjkUWvGh3t/vvm5exoHj7gCZSyz/H7Z4A3rpUJ7q0CXgqjIz0nz4nP5ljBeHe8rL86/',
     comment    => 'Dan Maloney',
     ensure     => present,
   }
@@ -117,7 +117,7 @@ class camstar::users {
     shell      => '/bin/bash',
     home       => '/home/pcliu',
     managehome => true,
-    password   => '$1$SrOicrFj$Wn8XVsnmibsPaUM8NsyQB0',
+    password   => '$6$anxaHrsb$mn.AMXRiOwAnr3YhNYvbds1pi8KPchTIQcj3lMEQWk4dngEnMZ4/XYvqunXXGXdWC9Qq.V.i7CiphIpwrolGk0',
     comment    => 'PengCheng Liu',
     ensure     => present,
   }
@@ -134,7 +134,7 @@ class camstar::users {
     shell      => '/bin/bash',
     home       => '/home/sseedharalu',
     managehome => true,
-    password   => '$1$SrOicrFj$Wn8XVsnmibsPaUM8NsyQB0',
+    password   => '$6$/8tDLCL1$/vgdrpK8ecHozZjwsTsSXXFk2gTaeMsbjoZkNkkFmiUGL0nmkJD.nzvesur3jVsZSdLMJNk.wR9Ys0dy4JICV1',
     comment    => 'Soma Seedharalu',
     ensure     => present,
   }
@@ -151,7 +151,7 @@ class camstar::users {
     shell      => '/bin/bash',
     home       => '/home/kdevalk',
     managehome => true,
-    password   => '$1$SrOicrFj$Wn8XVsnmibsPaUM8NsyQB0',
+    password   => '$6$sPt4fBSJ$OL4r3bPXVY98zjzZr.bS4y53jD5nxmZ3JAAU8zJZcAV49ZsTGxRDsuyKmnyCxsMp.vyAtUV6muoT0aaeY/EWg1',
     comment    => 'Kathleen Devalk',
     ensure     => present,
   }
