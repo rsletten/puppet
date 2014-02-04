@@ -36,6 +36,46 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class jetty {
+  class { '::jetty::user': } ->
+  class { '::jetty::home': } ->
+  class { '::jetty::app': } ->
+  Class ['jetty']
+}
 
+class jetty::user {
 
+  @group { 'cscprod':
+    gid    => '3000',
+    ensure => 'present',
+  }
+
+  @user { 'cscprod':
+    uid        => '3000',
+    gid        => '3000',
+    shell      => '/bin/bash',
+    home       => '/webservices/jetty',
+    managehome => 'true',
+    comment    => 'Jetty Service Account',
+    ensure     => 'present',
+  }
+
+  realize(Group['cscprod'])
+  realize(User['cscprod'])
+}
+
+class jetty::home {
+
+  file { '/webservices':
+    ensure => 'directory',
+    owner  => 'cscprod',
+    group  => 'cscprod',
+    mode   => '0755',
+  }
+}
+
+class jetty:app {
+
+  package { 'jdk':
+    ensure => 'present',
+  }
 }
