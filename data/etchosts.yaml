@@ -6,9 +6,9 @@ etchosts::csc:
     - '10.40.20.32  csc-mn02.saas.local csc-mn02'
   'Service Nodes':
     - '10.40.20.40  csc-sn00.saas.local csc-sn00'
-    - '10.40.20.41  csc-mn01.saas.local csc-sn01'
-    - '10.40.20.42  csc-mn02.saas.local csc-sn02'
-    - '10.40.20.43  csc-mn03.saas.local csc-sn03'
+    - '10.40.20.41  csc-sn01.saas.local csc-sn01'
+    - '10.40.20.42  csc-sn02.saas.local csc-sn02'
+    - '10.40.20.43  csc-sn03.saas.local csc-sn03'
   'Data Nodes':
     - '10.40.20.50  csc-wn00.saas.local csc-wn00'
     - '10.40.20.51  csc-wn01.saas.local csc-wn01'
