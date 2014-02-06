@@ -201,16 +201,16 @@ csc:
     multicastip: 239.2.11.72
   csc-jetty-0.saas.local:
     ip: 10.40.20.15
-    role: Jetty
-    multicastip: 239.2.11.74
+    role: Service
+    multicastip: 239.2.11.72
   csc-jetty-1.saas.local:
     ip: 10.40.20.16
-    role: Jetty
-    multicastip: 239.2.11.74
+    role: Service
+    multicastip: 239.2.11.72
   csc-jetty-2.saas.local:
     ip: 10.40.20.17
-    role: Jetty
-    multicastip: 239.2.11.74
+    role: Service
+    multicastip: 239.2.11.72
   csc-domain-0.csc.saas.local:
     ip: 10.40.20.20
     role: Service
