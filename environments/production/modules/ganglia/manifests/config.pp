@@ -1,6 +1,7 @@
 class ganglia::config {
   $csc = hiera('csc')
   $role = $csc[$::clientcert]['role']
+  $multicastip = $csc[$::clientcert]['multicastip']
   file { "/etc/ganglia/gmond.conf":
     ensure  => present,
     owner   => 'root',

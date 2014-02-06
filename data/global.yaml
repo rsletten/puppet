@@ -6,174 +6,232 @@ csc:
   csc-mn00.saas.local:
     ip: 10.40.20.30
     role: Master
+    multicastip: 239.2.11.71
   csc-mn01.saas.local:
     ip: 10.40.20.31
     role: Master
+    multicastip: 239.2.11.71
   csc-mn02.saas.local:
     ip: 10.40.20.32
     role: Master
+    multicastip: 239.2.11.71
   csc-sn00.saas.local:
     ip: 10.40.20.40
     role: Service
+    multicastip: 239.2.11.72
   csc-sn01.saas.local:
     ip: 10.40.20.41
     role: Service
+    multicastip: 239.2.11.72
   csc-sn02.saas.local:
     ip: 10.40.20.41
     role: Service
+    multicastip: 239.2.11.72
   csc-sn03.saas.local:
     ip: 10.40.20.43
     role: Service
+    multicastip: 239.2.11.72
   csc-wn00.saas.local:
     ip: 10.40.20.50
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn01.saas.local:
     ip: 10.40.20.51
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn02.saas.local:
     ip: 10.40.20.52
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn03.saas.local:
     ip: 10.40.20.53
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn04.saas.local:
     ip: 10.40.20.53
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn05.saas.local:
     ip: 10.40.20.55
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn06.saas.local:
     ip: 10.40.20.56
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn07.saas.local:
     ip: 10.40.20.57
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn08.saas.local:
     ip: 10.40.20.58
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn09.saas.local:
     ip: 10.40.20.59
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn10.saas.local:
     ip: 10.40.20.60
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn11.saas.local:
     ip: 10.40.20.61
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn12.saas.local:
     ip: 10.40.20.62
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn13.saas.local:
     ip: 10.40.20.63
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn14.saas.local:
     ip: 10.40.20.64
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn15.saas.local:
     ip: 10.40.20.65
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn16.saas.local:
     ip: 10.40.20.66
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn17.saas.local:
     ip: 10.40.20.67
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn18.saas.local:
     ip: 10.40.20.68
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn19.saas.local:
     ip: 10.40.20.69
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn20.saas.local:
     ip: 10.40.20.70
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn21.saas.local:
     ip: 10.40.20.71
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn22.saas.local:
     ip: 10.40.20.72
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn23.saas.local:
     ip: 10.40.20.73
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn24.saas.local:
     ip: 10.40.20.74
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn25.saas.local:
     ip: 10.40.20.75
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn26.saas.local:
     ip: 10.40.20.76
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn27.saas.local:
     ip: 10.40.20.77
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn28.saas.local:
     ip: 10.40.20.78
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn29.saas.local:
     ip: 10.40.20.79
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn30.saas.local:
     ip: 10.40.20.80
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn31.saas.local:
     ip: 10.40.20.81
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn32.saas.local:
     ip: 10.40.20.82
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn33.saas.local:
     ip: 10.40.20.83
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn34.saas.local:
     ip: 10.40.20.84
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn35.saas.local:
     ip: 10.40.20.85
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn36.saas.local:
     ip: 10.40.20.86
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn37.saas.local:
     ip: 10.40.20.87
     role: Worker
+    multicastip: 239.2.11.73
   csc-wn38.saas.local:
     ip: 10.40.20.88
     role: Worker
+    multicastip: 239.2.11.73
   csc-portal-0.csc.saas.local:
     ip: 10.40.20.10
     role: Service
+    multicastip: 239.2.11.72
   csc-portal-1.csc.saas.local:
     ip: 10.40.20.11
     role: Service
+    multicastip: 239.2.11.72
   csc-portal-2.csc.saas.local:
     ip: 10.40.20.12
     role: Service
+    multicastip: 239.2.11.72
   csc-jetty-0.saas.local:
     ip: 10.40.20.15
     role: Jetty
+    multicastip: 239.2.11.74
   csc-jetty-1.saas.local:
     ip: 10.40.20.16
     role: Jetty
+    multicastip: 239.2.11.74
   csc-jetty-2.saas.local:
     ip: 10.40.20.17
     role: Jetty
+    multicastip: 239.2.11.74
   csc-domain-0.csc.saas.local:
     ip: 10.40.20.20
     role: Service
+    multicastip: 239.2.11.72
   csc-domain-1.csc.saas.local:
     ip: 10.40.20.21
     role: Service
+    multicastip: 239.2.11.72
   csc-sql-0.csc.saas.local:
     ip: 10.40.20.25
     role: Service
+    multicastip: 239.2.11.72
   csc-sql-1.csc.saas.local:
     ip: 10.40.20.26
     role: Service
+    multicastip: 239.2.11.72
   stack0.saas.local:
     ip: 10.40.20.100
     role: Service
+    multicastip: 239.2.11.72
   stack1.saas.local:
     ip: 10.40.20.101
     role: Service
+    multicastip: 239.2.11.72
