@@ -156,6 +156,23 @@ class camstar::users {
     ensure     => present,
   }
 
+  # Nick
+  @group { 'naghazarian':
+    gid    => '2007',
+    ensure => present,
+  }
+
+  @user { 'naghazarian':
+    uid        => '2007',
+    gid        => '2007',
+    shell      => '/bin/bash',
+    home       => '/home/naghazarian',
+    managehome => true,
+    password   => '$6$sigIlFmt$h5bqbPuMHvnu8k8aWYfE1/bFeKpCELcyZNZls1dOn7zd/flx1VNdnaX4Wz0HUJbchy/mMaqKu/g1Qo23liEEm/',
+    comment    => 'Nick Aghazarian',
+    ensure     => present,
+  }
+
 }
 
 class camstar::accounts {
@@ -167,6 +184,7 @@ class camstar::accounts {
   realize(Group['pcliu'])
   realize(Group['sseedharalu'])
   realize(Group['kdevalk'])
+  realize(Group['naghazarian'])
   realize(User['rsletten'])
   realize(User['jthomas'])
   realize(User['kfarmer'])
@@ -174,5 +192,6 @@ class camstar::accounts {
   realize(User['pcliu'])
   realize(User['sseedharalu'])
   realize(User['kdevalk'])
+  realize(User['naghazarian'])
 }
 
