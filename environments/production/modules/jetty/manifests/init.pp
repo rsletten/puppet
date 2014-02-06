@@ -38,7 +38,7 @@
 class jetty {
   class { '::jetty::home': } ->
   class { '::jetty::user': } ->
-  class { '::jetty::app': } ->
+  class { '::jetty::jdk': } ->
   Class ['jetty']
 }
 
@@ -71,7 +71,7 @@ class jetty::home {
   }
 }
 
-class jetty::app {
+class jetty::jdk {
 
   package { 'jdk':
     ensure => 'present',
