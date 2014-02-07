@@ -20,6 +20,7 @@ class role::nonhadoop {
   include profile::rootsshkey
   include camstar::accounts
   include ganglia
+  include openipmi
 }
 
 class role::hadoop inherits role::nonhadoop {
