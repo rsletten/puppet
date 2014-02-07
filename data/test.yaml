@@ -1,11 +1,13 @@
 ---
 nagios: '192.168.3.10'
 clouderamanager: '192.168.3.75'
-puppetmaster: '192.168.3.10'
+puppetmaster: 'cobbler.camstar.local'
 csc:
   testcentos3.camstar.local:
     ip: 192.168.3.75
     role: Master
+    multicastip: 239.2.11.71
   testcentos4.camstar.local:
     ip: 192.168.3.76
     role: Worker
+    multicastip: 239.2.11.71
