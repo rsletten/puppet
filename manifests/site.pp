@@ -187,8 +187,10 @@ node 'csc-jetty-2.saas.local' {
 
 node 'stack0.saas.local' {
   include role::nonhadoop
+  include profile::mtu9000
 }
 
 node 'stack1.saas.local' {
   include role::nonhadoop
+  include profile::mtu9000
 }
