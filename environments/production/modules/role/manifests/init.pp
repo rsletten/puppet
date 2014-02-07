@@ -39,7 +39,6 @@ class role::manager {
   include profile::rootpass
   include cloudera::hadoopaccounts
   include profile::rootsshkey
-  include ganglia
   include ganglia::manager
   include cloudera::manager
 }
