@@ -36,17 +36,27 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class openipmi {
+  class { '::openipmi::package': } ->
+  class { '::openipmi::service': } ->
+  Class['openipmi']
+}
 
+class openipmi::package {
   package { 'OpenIPMI':
     ensure => 'installed',
   }
-
   package { 'ipmitool':
     ensure => 'installed',
   }
-
-  service { 'ipmi':
-    ensure => running,
-  }
-
 }
+
+class openipmi::service {
+  service { 'ipmi':
+    ensure    => running,
+    hasstatus => 'true',
+    harestart => 'true',
+    enable    => 'true',
+    require   => Class['openipmi::package'],
+  }
+}
+
