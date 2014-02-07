@@ -168,7 +168,7 @@ class camstar::users {
     shell      => '/bin/bash',
     home       => '/home/naghazarian',
     managehome => true,
-    password   => '$6$sigIlFmt$h5bqbPuMHvnu8k8aWYfE1/bFeKpCELcyZNZls1dOn7zd/flx1VNdnaX4Wz0HUJbchy/mMaqKu/g1Qo23liEEm/',
+    password   => '$1$iC.6nL97$NxFw4YX9pYsJLz5erJ55q1',
     comment    => 'Nick Aghazarian',
     ensure     => present,
   }
