@@ -169,6 +169,7 @@ node 'csc-wn38.saas.local' {
 }
 
 node 'csc-sn03.saas.local' {
+  include role::manager
 }
 
 node 'csc-jetty-0.saas.local' {

@@ -29,6 +29,17 @@ class role::hadoop inherits role::nonhadoop {
   include profile::mtu9000
   include profile::thpnever
   include cloudera::hadoopaccounts
-  include ganglia
   include cloudera::agent
+}
+
+class role::manager {
+  include etchosts
+  include profile::cups
+  include profile::mtu9000
+  include profile::rootpass
+  include cloudera::hadoopaccounts
+  include profile::rootsshkey
+  include ganglia
+  include ganglia::manager
+  include cloudera::manager
 }
