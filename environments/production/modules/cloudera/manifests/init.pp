@@ -103,6 +103,9 @@ class hadoopgroups::virtual {
     gid     => '1015',
     ensure  => present,
   }
+  @group { 'spark':
+    gid     => '1016',
+    ensure  => present,
 }
 
 class hadoopusers::virtual {
@@ -255,6 +258,15 @@ class hadoopusers::virtual {
     comment    => 'Solr',
     ensure     => present
   }
+  @user { 'spark':
+    uid        => '1016',
+    gid        => '1016',
+    shell      => '/sbin/nologin',
+    home       => '/var/lib/spark',
+    managehome => true,
+    comment    => 'Spark',
+    ensure     => present
+  }
 }
 
 class cloudera::hadoopaccounts {
@@ -276,6 +288,7 @@ class cloudera::hadoopaccounts {
   realize(Group['impala'])
   realize(Group['solr'])
   realize(Group['hadoop'])
+  realize(Group['spark'])
   realize(User['cloudera-scm'])
   realize(User['hue'])
   realize(User['hbase'])
@@ -291,4 +304,5 @@ class cloudera::hadoopaccounts {
   realize(User['flume'])
   realize(User['impala'])
   realize(User['solr'])
+  realize(User['spark'])
 }
