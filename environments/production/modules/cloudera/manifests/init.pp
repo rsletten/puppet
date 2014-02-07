@@ -106,6 +106,7 @@ class hadoopgroups::virtual {
   @group { 'spark':
     gid     => '1016',
     ensure  => present,
+  }
 }
 
 class hadoopusers::virtual {
