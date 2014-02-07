@@ -173,16 +173,16 @@ node 'csc-sn03.saas.local' {
 }
 
 node 'csc-jetty-0.saas.local' {
-  include role::nonhadoop
+  include role::virtual
   include jetty
 }
 
 node 'csc-jetty-1.saas.local' {
-  include role::nonhadoop
+  include role::virtual
 }
 
 node 'csc-jetty-2.saas.local' {
-  include role::nonhadoop
+  include role::virtual
 }
 
 node 'stack0.saas.local' {

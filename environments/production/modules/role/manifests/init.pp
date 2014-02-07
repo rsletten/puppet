@@ -23,6 +23,18 @@ class role::nonhadoop {
   include openipmi
 }
 
+class role::virtual {
+  include etchosts
+  include profile::puppetmaster
+  include profile::rootpass
+  include profile::cups
+  include profile::nrpe
+  include profile::ntpconfig
+  include profile::rootsshkey
+  include camstar::accounts
+  include ganglia
+}
+
 class role::hadoop inherits role::nonhadoop {
   include profile::datazero
   include profile::hadooplimits
@@ -42,4 +54,5 @@ class role::manager {
   include profile::rootsshkey
   include ganglia::manager
   include cloudera::manager
+  include openipmi
 }

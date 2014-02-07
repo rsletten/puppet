@@ -43,6 +43,7 @@ class openipmi {
 
   package { 'ipmitool':
     ensure => 'installed',
+  }
 
   service { 'ipmi':
     ensure => running,
