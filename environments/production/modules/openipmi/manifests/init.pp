@@ -52,11 +52,11 @@ class openipmi::package {
 
 class openipmi::service {
   service { 'ipmi':
-    ensure    => running,
-    hasstatus => 'true',
-    harestart => 'true',
-    enable    => 'true',
-    require   => Class['openipmi::package'],
+    ensure     => running,
+    hasstatus  => 'true',
+    hasrestart => 'true',
+    enable     => 'true',
+    require    => Class['openipmi::package'],
   }
 }
 
