@@ -40,6 +40,7 @@ class jetty {
   class { '::jetty::user': } ->
   class { '::jetty::jdk': } ->
   class { '::jetty::tuning': } ->
+  class { '::jetty::limits': } ->
   Class ['jetty']
 }
 
