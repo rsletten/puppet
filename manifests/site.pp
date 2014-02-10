@@ -174,11 +174,11 @@ node 'csc-sn03.saas.local' {
 
 node 'csc-jetty-0.saas.local' {
   include role::virtual
-  include jetty
 }
 
 node 'csc-jetty-1.saas.local' {
   include role::virtual
+  include jetty
 }
 
 node 'csc-jetty-2.saas.local' {

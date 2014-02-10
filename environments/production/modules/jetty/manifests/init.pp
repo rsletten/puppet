@@ -41,6 +41,8 @@ class jetty {
   class { '::jetty::jdk': } ->
   class { '::jetty::tuning': } ->
   class { '::jetty::limits': } ->
+  class { '::jetty::repo': } ->
+  class { '::jetty::package': } ->
   Class ['jetty']
 }
 
