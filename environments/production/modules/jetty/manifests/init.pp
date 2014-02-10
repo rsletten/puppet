@@ -39,6 +39,7 @@ class jetty {
   class { '::jetty::home': } ->
   class { '::jetty::user': } ->
   class { '::jetty::jdk': } ->
+  class { '::jetty::tuning': } ->
   Class ['jetty']
 }
 
