@@ -72,6 +72,20 @@ class profile::hadooplimits {
       limit_type => 'nofile',
       both       => 32768,
     }
+
+  limits::limits { 'solr_nofile':
+      ensure     => present,
+      user       => 'solr',
+      limit_type => 'nofile',
+      both       => 32768,
+    }
+
+  limits::limits { 'solr_nproc':
+      ensure     => present,
+      user       => 'solr',
+      limit_type => 'nproc',
+      both       => 32768,
+    }
 }
 
 class profile::hadoopsysctl {
