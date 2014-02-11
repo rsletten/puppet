@@ -6,10 +6,10 @@ class jetty::tuning {
     value => '16777216'
   }
   sysctl { 'net.ipv4.tcp_rmem':
-    value => "4096\t87380\t16777216"
+    value => "4096 87380 16777216"
   }
   sysctl { 'net.ipv4.tcp_wmem':
-    value => "4096\t16384\t16777216"
+    value => "4096 16384 16777216"
   }
   sysctl { 'net.core.netdev_max_backlog':
     value => '16384'
@@ -21,7 +21,7 @@ class jetty::tuning {
     value => '4096'
   }
   sysctl { 'net.ipv4.ip_local_port_range':
-    value => "1024\t65535"
+    value => "1024 65535"
   }
   sysctl { 'net.ipv4.tcp_tw_recycle':
     value => '1'
