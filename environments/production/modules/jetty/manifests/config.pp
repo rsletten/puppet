@@ -20,7 +20,7 @@ class jetty::config {
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
-    source  => "puppet:///modules/jetty/jetty",
+    source  => 'puppet:///modules/jetty/jetty',
     require => Class['jetty::package'],
   }
 
@@ -28,8 +28,8 @@ class jetty::config {
     ensure  => 'present',
     owner   => 'root',
     group   => 'root',
-    mode    => '0755'
-    source  => "puppet:///modules/jetty/jetty.sh",
+    mode    => '0755',
+    source  => 'puppet:///modules/jetty/jetty.sh',
     require => Class['jetty::package'],
   }
 
