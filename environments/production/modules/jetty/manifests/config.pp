@@ -1,7 +1,7 @@
 class jetty::config {
   $dbserver = hiera('tenant_registry_dbserver')
   $dbport = hiera('tenant_registry_dbport')
-  $dbtype = hiera('tenant_registry_dbyype')
+  $dbtype = hiera('tenant_registry_dbtype')
   $dbschema = hiera('tenant_registry_schema')
   $dbdriver = hiera('tenant_registry_driver')
   $dbuser = hiera('tenant_registry_user')
