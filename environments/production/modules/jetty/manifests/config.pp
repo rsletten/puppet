@@ -1,11 +1,11 @@
 class jetty::config {
-  $dbserver = hiera('tenant.registry.dbServer')
-  $dbport = hiera('tenant.registry.dbPort')
-  $dbtype = hiera('tenant.registry.dbType')
-  $dbschema = hiera('tenant.registry.schema')
-  $dbdriver = hiera('tenant.registry.driver')
-  $dbuser = hiera('tenant.registry.user')
-  $dbpass = hiera('tenant.registry.pass')
+  $dbserver = hiera('tenant_registry_dbserver')
+  $dbport = hiera('tenant_registry_dbport')
+  $dbtype = hiera('tenant_registry_dbyype')
+  $dbschema = hiera('tenant_registry_schema')
+  $dbdriver = hiera('tenant_registry_driver')
+  $dbuser = hiera('tenant_registry_user')
+  $dbpass = hiera('tenant_registry_pass')
   file { '/webservices/jetty/resources/dbsettings.properties':
     ensure  => 'present',
     owner   => 'cscprod',

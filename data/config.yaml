@@ -1,9 +1,8 @@
 ---
-# dbsettings.properties
-tenant.registry.dbServer: '10.40.20.15'
-tenant.registry.dbPort: '3306'
-tenant.registry.dbType: 'MYSQL'
-tenant.registry.schema: 'tenant_registry'
-tenant.registry.driver: 'com.mysql.jdbc.Driver'
-tenant.registry.user: 'falcon'
-tenant.registry.pass: 'falcon'
+tenant_registry_dbserver: '10.40.20.15'
+tenant_registry_dbport: '3306'
+tenant_registry_dbtype: 'MYSQL'
+tenant_registry_schema: 'tenant_registry'
+tenant_registry_driver: 'com.mysql.jdbc.Driver'
+tenant_registry_user: 'falcon'
+tenant_registry_pass: 'falcon'
