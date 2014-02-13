@@ -4,7 +4,6 @@ class nginx::service {
     hasstatus => 'true',
     hasrestart => 'true',
     enable    => 'true',
-    require   => Class['nginx::package'],
   }
 }
 
