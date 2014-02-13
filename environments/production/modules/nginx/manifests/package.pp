@@ -1,5 +1,6 @@
 class nginx::package {
   package { 'nginx':
-    ensure => 'installed',
+    ensure  => '1.5.10'
+    require => Class['nginx::repo'],
   }
 }

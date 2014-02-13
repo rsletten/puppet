@@ -36,6 +36,7 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class nginx {
+  class { '::nginx::repo': } ->
   class { '::nginx::package': } ->
   class { '::nginx::config': } ->
   class { '::nginx::service': } ->
