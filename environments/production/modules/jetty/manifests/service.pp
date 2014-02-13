@@ -4,6 +4,6 @@ class jetty::service {
     enable     => 'true',
     hasrestart => 'true',
     hasstatus  => 'true',
-    requires   => Class['jetty::package'],
+    require    => Class['jetty::package'],
   }
 }
