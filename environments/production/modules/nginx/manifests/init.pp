@@ -38,5 +38,6 @@
 class nginx {
   class { '::nginx::package': } ->
   class { '::nginx::service': } ->
+  class { '::nginx::config': } ->
   Class['ssh']
 }
