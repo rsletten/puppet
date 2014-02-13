@@ -1,5 +1,5 @@
 class nginx::config {
-  file { 'nginx.conf':
+  file { '/etc/nginx/nginx.conf':
     ensure  => 'present',
     owner   => 'root',
     group   => 'root',
