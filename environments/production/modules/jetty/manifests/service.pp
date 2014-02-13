@@ -1,7 +1,7 @@
 class jetty::service {
   service { 'jetty':
     ensure     => 'running',
-    enabled    => 'true',
+    enable     => 'true',
     hasrestart => 'true',
     hasstatus  => 'true',
     requires   => Class['jetty::package'],
