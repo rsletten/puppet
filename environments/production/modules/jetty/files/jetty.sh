@@ -467,7 +467,7 @@ case "$ACTION" in
         touch "$JETTY_PID"
         chown "$JETTY_USER" "$JETTY_PID"
         # FIXME: Broken solution: wordsplitting, pathname expansion, arbitrary command execution, etc.
-        su - "$JETTY_USER" -c "
+        su - "$JETTY_USER" -c "cd $JETTY_HOME ;
           exec ${RUN_CMD[*]} --daemon &
           disown \$!
           echo \$! > '$JETTY_PID'"
