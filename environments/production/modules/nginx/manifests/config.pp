@@ -5,7 +5,7 @@ class nginx::config {
     group   => 'root',
     mode    => '0644',
     content => template('nginx/nginx.conf.erb'),
-    require => Class['nginx::package'],
+    require => Class['nginx::service'],
     notify  => Class['nginx::service'],
   }
 }
