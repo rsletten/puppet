@@ -1,6 +1,6 @@
 class nginx::config {
   file { 'nginx.conf':
-    ensure  => 'present'
+    ensure  => 'present',
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
