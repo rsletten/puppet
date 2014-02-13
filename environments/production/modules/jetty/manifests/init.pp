@@ -44,6 +44,7 @@ class jetty {
   class { '::jetty::repo': } ->
   class { '::jetty::package': } ->
   class { '::jetty::config': } ->
+  class { '::jetty::service': } ->
   Class ['jetty']
 }
 
