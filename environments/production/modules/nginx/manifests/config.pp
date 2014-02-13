@@ -6,5 +6,6 @@ class nginx::config {
     mode    => '0644',
     content => template('nginx/nginx.conf.erb'),
     require => Class['nginx::package'],
+    notify  => Class['nginx::service'],
   }
 }

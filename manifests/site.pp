@@ -180,7 +180,8 @@ node 'csc-jetty-1.saas.local' {
   $falconwebservices = {
     node1 => { 'server' => '10.40.20.15', port => '8080' },
     node2 => { 'server' => '10.40.20.16', port => '8080' },
-    node3 => { 'server' => '10.40.20.17', port => '8080' }
+    node3 => { 'server' => '10.40.20.17', port => '8080' },
+    node4 => { 'server' => '10.40.20.18', port => '8080' }
   }
   $balancerport = '8085'
 
