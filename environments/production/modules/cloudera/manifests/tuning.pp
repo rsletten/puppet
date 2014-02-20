@@ -26,4 +26,7 @@ class cloudera::tuning {
   sysctl { 'net.ipv4.tcp_syn_retries':
     value => '3'
   }
+  sysctl { 'net.ipv4.tcp_tw_recycle':
+    value => '1'
+  }
 }
