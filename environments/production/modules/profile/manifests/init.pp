@@ -20,7 +20,7 @@ class profile::xwindows {
     ensure => 'running',
   }
 
-  augeas { 'X11UseLocalhost':
+  augeas { 'sshd_config':
     context => '/etc/sshd/sshd_config',
     changes => "X11UseLocalhost 'no'",
     notify  => Service["sshd"],
