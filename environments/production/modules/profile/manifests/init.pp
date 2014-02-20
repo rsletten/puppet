@@ -13,11 +13,14 @@
 
 class profile::xwindows {
   package { 'xorg-x11-xauth':
-    ensure => 'installed',
+    ensure  => 'installed',
+    require => Augeas['X11UseLocalhost'],
   }
 
   service { 'sshd':
-    ensure => 'running',
+    ensure     => 'running',
+    hasstatus  => 'true',
+    hasrestart => 'true',
   }
 
   augeas { 'X11UseLocalhost':
