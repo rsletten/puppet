@@ -20,11 +20,12 @@ class profile::xwindows {
     ensure => 'running',
   }
 
-  augeus { 'X11UseLocalhost':
+  augeas { 'X11UseLocalhost':
     context => '/etc/sshd/sshd_config',
     changes => "X11UseLocalhost 'no'",
-    notify  => Service["sshd"},
+    notify  => Service["sshd"],
   }
+}
 
 class profile::puppetmaster {
   $pupmaster = hiera('puppetmaster')
