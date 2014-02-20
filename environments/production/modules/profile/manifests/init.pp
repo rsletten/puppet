@@ -11,6 +11,21 @@
 # Sample Usage:
 #
 
+class profile::xwindows {
+  package { 'xorg-x11-xauth':
+    ensure => 'installed',
+  }
+
+  service { 'sshd':
+    ensure => 'running',
+  }
+
+  augeus { 'X11UseLocalhost':
+    context => '/etc/sshd/sshd_config',
+    changes => "X11UseLocalhost 'no'",
+    notify  => Service["sshd"},
+  }
+
 class profile::puppetmaster {
   $pupmaster = hiera('puppetmaster')
   file { "/etc/puppet/puppet.conf":
@@ -96,7 +111,7 @@ class profile::hadoopsysctl {
 
 class profile::mtu9000 {
   augeas { "ifcfg-bond0":
-    context   => '/files/etc/sysconfig/network-scripts/ifcfg-bond0',
+    context => '/files/etc/sysconfig/network-scripts/ifcfg-bond0',
     changes => "set MTU '9000'",
   }
 }
