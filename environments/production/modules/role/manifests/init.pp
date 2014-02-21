@@ -18,6 +18,7 @@ class role::nonhadoop {
   include profile::nrpe
   include profile::ntpconfig
   include profile::rootsshkey
+  include profile::xwindows
   include camstar::accounts
   include ganglia
   include openipmi
@@ -31,6 +32,7 @@ class role::virtual {
   include profile::nrpe
   include profile::ntpconfig
   include profile::rootsshkey
+  include profile::xwindows
   include camstar::accounts
   include ganglia
 }

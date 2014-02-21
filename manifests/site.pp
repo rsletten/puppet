@@ -201,5 +201,4 @@ node 'stack0.saas.local' {
 node 'stack1.saas.local' {
   include role::nonhadoop
   include profile::mtu9000
-  include profile::xwindows
 }
