@@ -173,6 +173,24 @@ class camstar::users {
     ensure     => present,
   }
 
+  # Nick
+  @group { 'amin':
+    gid    => '2008',
+    ensure => present,
+  }
+
+  @user { 'amin':
+    uid        => '2008',
+    gid        => '2008',
+    shell      => '/bin/bash',
+    home       => '/home/amin',
+    managehome => true,
+    password   => '$6$LsksSkC.$aF5VjkdSAZl6/OeXX77EoLZpbIzEr3DTL0t.nKf5wDTChin4ktfjIoH9TImlJgkSGV72XIpFY4MpeXZq0OuxX1',
+    comment    => 'Amin Shah-hosseini',
+    ensure     => present,
+  }
+
+
 }
 
 class camstar::accounts {
@@ -185,6 +203,7 @@ class camstar::accounts {
   realize(Group['sseedharalu'])
   realize(Group['kdevalk'])
   realize(Group['naghazarian'])
+  realize(Group['naghazarian'])
   realize(User['rsletten'])
   realize(User['jthomas'])
   realize(User['kfarmer'])
@@ -193,6 +212,7 @@ class camstar::accounts {
   realize(User['sseedharalu'])
   realize(User['kdevalk'])
   realize(User['naghazarian'])
+  realize(User['amin'])
 
   ssh_authorized_key { 'rsletten':
     user   => "rsletten",
