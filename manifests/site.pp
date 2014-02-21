@@ -205,9 +205,37 @@ node 'stack1.saas.local' {
 
 node 'csc-sn00' {
 }
+
 node 'csc-sn00.saas.local' {
 }
+
 node 'csc-sn01.saas.local' {
 }
+
 node 'csc-sn02.saas.local' {
 }
+
+node 'csc-sql-0.csc.saas.local' {
+}
+
+node 'csc-sql-1.csc.saas.local' {
+}
+
+node 'csc-domain-0.csc.saas.local' {
+}
+
+node 'csc-domain-1.csc.saas.local' {
+}
+
+node 'csc-portal-0.csc.saas.local' {
+}
+
+node 'csc-portal-1.csc.saas.local' {
+}
+
+node 'csc-portal-2.csc.saas.local' {
+}
+
+node 'csc-cache-0.csc.saas.local' {
+}
+
