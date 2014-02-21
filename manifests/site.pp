@@ -203,6 +203,8 @@ node 'stack1.saas.local' {
   include profile::mtu9000
 }
 
+node 'csc-sn00' {
+}
 node 'csc-sn00.saas.local' {
 }
 node 'csc-sn01.saas.local' {
