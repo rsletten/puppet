@@ -202,3 +202,10 @@ node 'stack1.saas.local' {
   include role::nonhadoop
   include profile::mtu9000
 }
+
+node 'csc-sn00.saas.local' {
+}
+node 'csc-sn01.saas.local' {
+}
+node 'csc-sn02.saas.local' {
+}
