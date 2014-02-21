@@ -203,7 +203,7 @@ class camstar::accounts {
   realize(Group['sseedharalu'])
   realize(Group['kdevalk'])
   realize(Group['naghazarian'])
-  realize(Group['naghazarian'])
+  realize(Group['amin'])
   realize(User['rsletten'])
   realize(User['jthomas'])
   realize(User['kfarmer'])
