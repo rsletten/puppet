@@ -176,7 +176,7 @@ class profile::thpnever {
 }
 
 class profile::jksfiles {
-  require => User['hdfs']
+  require cloudera::hadoopaccounts
   file { "/home/hdfs":
     ensure => 'directory',
     owner  => 'hdfs',
