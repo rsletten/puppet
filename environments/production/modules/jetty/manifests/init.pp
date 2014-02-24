@@ -43,8 +43,8 @@ class jetty {
   class { '::jetty::limits': } ->
   class { '::jetty::repo': } ->
   class { '::jetty::package': } ->
-  class { '::jetty::service': } ->
   class { '::jetty::config': } ->
+  class { '::jetty::service': } ->
   Class ['jetty']
 }
 

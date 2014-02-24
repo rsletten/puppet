@@ -13,7 +13,7 @@ class jetty::config {
     mode    => '0644',
     content => template('jetty/dbsettings.properties.erb'),
     require => Class['jetty::package'],
-    notify  => Service['::jetty::service'],
+    notify  => Class['jetty::service'],
   }
 
   file { '/etc/default/jetty':
