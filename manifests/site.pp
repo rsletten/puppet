@@ -173,7 +173,14 @@ node 'csc-sn03.saas.local' {
 }
 
 node 'csc-jetty-0.saas.local' {
+  $falconwebservices = {
+    node1 => { 'server' => '10.40.20.15', port => '8080' },
+    node2 => { 'server' => '10.40.20.16', port => '8080' },
+    node3 => { 'server' => '10.40.20.17', port => '8080' },
+  }
+  $balanceport = '8085'
   include role::virtual
+  include nginx
 }
 
 node 'csc-jetty-1.saas.local' {
