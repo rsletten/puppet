@@ -175,6 +175,24 @@ class profile::thpnever {
   } 
 }
 
+class profile::jksfiles {
+  file { "/home/hdfs/ssl/keystore.jks":
+    ensure => present,
+    owner  => 'hdfs',
+    group  => 'hdfs',
+    mode   => 0644,
+    source => "puppet:///files/keystore.jks"
+  }
+
+  file { "/home/hdfs/ssl/truststore.jks":
+    ensure => present,
+    owner  => 'hdfs',
+    group  => 'hdfs',
+    mode   => 0644,
+    source => "puppet:///files/truststore.jks"
+  }
+}
+
 class profile::hostsfile {
   host { 'puppet':
     ensure => absent,
