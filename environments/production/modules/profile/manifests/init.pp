@@ -176,6 +176,18 @@ class profile::thpnever {
 }
 
 class profile::jksfiles {
+  file { "/home/hdfs":
+    ensure => 'directory',
+    owner  => 'hdfs',
+    group  => 'hdfs',
+  }
+
+  file { "/home/hdfs/ssl":
+    ensure => 'directory',
+    owner  => 'hdfs',
+    group  => 'hdfs',
+  }
+
   file { "/home/hdfs/ssl/keystore.jks":
     ensure => present,
     owner  => 'hdfs',
