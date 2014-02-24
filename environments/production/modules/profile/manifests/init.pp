@@ -176,6 +176,7 @@ class profile::thpnever {
 }
 
 class profile::jksfiles {
+  require => User['hdfs']
   file { "/home/hdfs":
     ensure => 'directory',
     owner  => 'hdfs',
