@@ -180,6 +180,7 @@ node 'csc-jetty-0.saas.local' {
   }
   $balanceport = '8085'
   include role::virtual
+  include jetty
   include nginx
 }
 
