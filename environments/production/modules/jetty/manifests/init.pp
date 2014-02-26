@@ -60,7 +60,7 @@ class jetty::user {
     gid        => '3000',
     shell      => '/bin/bash',
     home       => '/webservices/jettyhome',
-    managehome => 'true',
+    managehome => true,
     comment    => 'Jetty Service Account',
     ensure     => 'present',
   }

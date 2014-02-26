@@ -10,6 +10,9 @@
 #
 # Sample Usage:
 #
+
+class role {}
+
 class role::nonhadoop {
   include etchosts
   include profile::puppetmaster

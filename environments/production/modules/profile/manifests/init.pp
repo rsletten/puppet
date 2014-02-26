@@ -11,6 +11,8 @@
 # Sample Usage:
 #
 
+class profile {}
+
 class profile::xwindows {
   package { 'xorg-x11-xauth':
     ensure  => 'installed',
@@ -19,8 +21,8 @@ class profile::xwindows {
 
   service { 'sshd':
     ensure     => 'running',
-    hasstatus  => 'true',
-    hasrestart => 'true',
+    hasstatus  => true,
+    hasrestart => true,
   }
 
   augeas { 'X11UseLocalhost':
@@ -209,7 +211,7 @@ class profile::jksfiles {
 class profile::hostsfile {
   host { 'puppet':
     ensure => absent,
-    ip     => $master,
+    ip     => $::puppetmaster,
     target => '/etc/hosts'
   }
   host { 'csc-sn03.saas.local':

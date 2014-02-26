@@ -10,6 +10,8 @@
 #
 # Sample Usage:
 #
+class cloudera {}
+
 class cloudera::agent {
   class { '::cloudera::agent::package': } ->
   class { '::cloudera::agent::config': } ->

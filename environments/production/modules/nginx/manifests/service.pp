@@ -1,9 +1,9 @@
 class nginx::service {
   service { 'nginx':
     ensure     => 'running',
-    hasstatus  => 'true',
-    hasrestart => 'true',
-    enable     => 'true',
+    hasstatus  => true,
+    hasrestart => true,
+    enable     => true,
     require    => Class['nginx::package'],
   }
 }
