@@ -161,8 +161,14 @@ class profile::rootpass {
 }
 
 class profile::gituser {
+  group { 'git':
+    ensure => present,
+    gid    => '3001',
+  }
   user { 'git':
     ensure     => present,
+    uid        => '3001',
+    gid        => '3001',
     home       => '/git',
     managehome => true,
     comment    => 'Git User',
