@@ -154,6 +154,7 @@ node 'csc-wn34.saas.local' {
 
 node 'csc-wn35.saas.local' {
   include role::hadoop
+  include cloudera::zkensemble
 }
 
 node 'csc-wn36.saas.local' {
