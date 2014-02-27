@@ -161,16 +161,12 @@ class profile::rootpass {
 }
 
 class profile::gituser {
-  @group { 'git':
-    ensure => present,
+  user { 'git':
+    ensure     => present,
+    home       => '/git',
+    managehome => true,
+    comment    => 'Git User',
   }
-
-  @user { 'git':
-    ensure => present,
-  }
-
-  realize(Group['git'])
-  realize(User['git'])
 
   ssh_authorized_key { 'git':
     user   => "git",
