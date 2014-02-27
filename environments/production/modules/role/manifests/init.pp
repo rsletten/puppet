@@ -61,4 +61,6 @@ class role::manager {
   include ganglia::manager
   include cloudera::manager
   include openipmi
+  include profile::gituser
+  include camstar::accounts
 }
