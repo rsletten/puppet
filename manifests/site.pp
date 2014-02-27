@@ -195,6 +195,7 @@ node 'csc-jetty-1.saas.local' {
   include role::virtual
   include jetty
   include nginx
+  include pentaho
 }
 
 node 'csc-jetty-2.saas.local' {
