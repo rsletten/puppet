@@ -26,12 +26,23 @@ class cloudera::manager {
   Class['cloudera::manager']
 }
 
+#class cloudera::zkensemble {
+#  augeas { 'solrzkensemble':
+#    context => '/files/opt/cloudera/parcels/SOLR-1.2.0-1.cdh4.5.0.p0.4/etc/default/solr',
+#    changes => "set SOLR_ZK_ENSEMBLE csc-mn00.saas.local:2181,csc-mn01.saas.local:2181,csc-mn02.saas.local:2181/solr"
+#  }
+#}
+
 class cloudera::zkensemble {
-  augeas { 'solrzkensemble':
-    context => '/files/opt/cloudera/parcels/SOLR-1.2.0-1.cdh4.5.0.p0.4/etc/default/solr',
-    changes => "set SOLR_ZK_ENSEMBLE 'csc-mn00.saas.local:2181,csc-mn01.saas.local:2181,csc-mn02.saas.local:2181/solr'"
+  file { '/opt/cloudera/parcels/SOLR/etc/default/solr':
+    ensure => 'present',
+    owner  => 'root',
+    group  => 'root',
+    mode   => '0755',
+    source => "puppet:///modules/cloudera/solr",
   }
 }
+
 
 class hadoopgroups::virtual {
    @group { 'cloudera-scm':
