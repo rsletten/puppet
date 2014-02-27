@@ -176,6 +176,14 @@ class profile::rootsshkey {
     mode   => '0600',
     source => 'puppet:///files/id_rsa',
   }
+
+  file { '/root/.ssh/config':
+    ensure => present,
+    owner  => 'root',
+    group  => 'root',
+    mode   => '0600',
+    source => 'puppet:///files/config',
+  }
 }
 
 class profile::thpnever {
