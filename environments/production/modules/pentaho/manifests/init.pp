@@ -36,6 +36,24 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class pentaho {
+  include pentaho::user
+  realize (Group['pentaho'])
+  realize (User['pentaho'])
+}
 
+class pentaho::user {
+  @group { 'pentaho':
+    gid    => '3002',
+    ensure => present,
+  }
 
+  @user { 'pentaho':
+    uid        => '3002',
+    gid        => '3002',
+    shell      => '/bin/bash',
+    home       => '/opt/pentaho',
+    managehome => true,
+    comment    => 'Pentaho User',
+    ensure     => 'present',
+  }
 }
