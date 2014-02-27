@@ -2,14 +2,17 @@ import 'testnodes.pp'
 
 node 'csc-mn00.saas.local' {
   include role::hadoop
+  include cloudera::zkensemble
 }
 
 node 'csc-mn01.saas.local' {
   include role::hadoop
+  include cloudera::zkensemble
 }
 
 node 'csc-mn02.saas.local' {
   include role::hadoop
+  include cloudera::zkensemble
 }
 
 node 'csc-wn00.saas.local' {
