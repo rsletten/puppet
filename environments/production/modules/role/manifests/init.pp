@@ -48,6 +48,7 @@ class role::hadoop inherits role::nonhadoop {
   include profile::thpnever
   include cloudera::hadoopaccounts
   include cloudera::agent
+  include cloudera::zkensemble
   include profile::jksfiles
 }
 
