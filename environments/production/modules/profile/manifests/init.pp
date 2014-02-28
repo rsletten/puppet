@@ -248,6 +248,8 @@ class profile::jksfiles {
 }
 
 class profile::mcollective-server {
+  realize(Group['clusteradmin'])
+  realize(User['clusteradmin'])
   class { '::mcollective':
     client             => true,
     middleware         => true,
@@ -264,6 +266,12 @@ class profile::mcollective-server {
     certificate => 'puppet:///modules/site_mcollective/client_certs/rsletten.pem',
     private_key => 'puppet:///modules/site_mcollective/private_keys/rsletten.pem',
     homedir     => '/home/rsletten',
+  }
+
+  mcollective::user { 'clusteradmin':
+    certificate => 'puppet:///modules/site_mcollective/client_certs/clusteradmin.pem',
+    private_key => 'puppet:///modules/site_mcollective/private_keys/clusteradmin.pem',
+    homedir     => '/home/clusteradmin',
   }
 
   mcollective::plugin { 'puppet':
