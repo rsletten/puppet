@@ -175,7 +175,7 @@ class camstar::users {
     ensure     => present,
   }
 
-  # Nick
+  # Amin
   @group { 'amin':
     gid    => '2008',
     ensure => present,
@@ -192,6 +192,21 @@ class camstar::users {
     ensure     => present,
   }
 
+   @group { 'clusteradmin':
+     gid    => '2009',
+     ensure => present,
+   }
+
+   @user { 'clusteradmin':
+     uid        => '2009',
+     gid        => '2009',
+     shell      => '/bin/bash',
+     home       => '/home/clusteradmin',
+     managehome => true,
+     password   => '$6$a.2gt6aUapyeUoy4$v92sHgtZcNvoCwrs0.tgttv3T3mQj03oDDm.buekk33yQDT6KFygxrIjYRHhXrTnIyvfFdOJfnVTieN.26lf2/',
+     comment    => 'Cluster Administrator',
+     ensure     => present,
+   }
 
 }
 

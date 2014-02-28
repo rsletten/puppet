@@ -67,4 +67,6 @@ class role::manager {
   include profile::gituser
   include camstar::accounts
   include profile::mcollective-server
+  realize(Group['clusteradmin'])
+  realize(User['clusteradmin'])
 }
