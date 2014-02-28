@@ -270,6 +270,13 @@ class profile::mcollective-server {
     package => true,
   }
 
+  mcollective::plugin { 'service':
+    package => true,
+  }
+
+  mcollective::plugin { 'package':
+    package => true,
+  }
 }
 
 class profile::mcollective-client {
@@ -284,6 +291,14 @@ class profile::mcollective-client {
   }
 
   mcollective::plugin { 'puppet':
+    package => true,
+  }
+
+  mcollective::plugin { 'service':
+    package => true,
+  }
+
+  mcollective::plugin { 'package':
     package => true,
   }
 
