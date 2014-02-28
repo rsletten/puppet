@@ -25,6 +25,7 @@ class role::nonhadoop {
   include camstar::accounts
   include ganglia
   include openipmi
+  include profile::mcollective-client
 }
 
 class role::virtual {
@@ -38,6 +39,7 @@ class role::virtual {
   include profile::xwindows
   include camstar::accounts
   include ganglia
+  include profile::mcollective-client
 }
 
 class role::hadoop inherits role::nonhadoop {
@@ -64,4 +66,5 @@ class role::manager {
   include openipmi
   include profile::gituser
   include camstar::accounts
+  include profile::mcollective-server
 }

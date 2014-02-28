@@ -274,13 +274,13 @@ class profile::mcollective-server {
 
 class profile::mcollective-client {
   class { '::mcollective':
-    middleware_hosts   => [ 'cobbler.camstar.local'],
+    middleware_hosts   => [ 'csc-sn03.saas.local'],
     middleware_ssl     => true,
     securityprovider   => 'ssl',
     ssl_client_certs   => 'puppet:///modules/site_mcollective/client_certs',
     ssl_ca_cert        => 'puppet:///modules/site_mcollective/certs/ca.pem',
-    ssl_server_public  => 'puppet:///modules/site_mcollective/certs/cobbler.camstar.local.pem',
-    ssl_server_private => 'puppet:///modules/site_mcollective/private_keys/cobbler.camstar.local.pem',
+    ssl_server_public  => 'puppet:///modules/site_mcollective/certs/csc-sn03.saas.local.pem',
+    ssl_server_private => 'puppet:///modules/site_mcollective/private_keys/csc-sn03.saas.local.pem',
   }
 
   mcollective::plugin { 'puppet':
