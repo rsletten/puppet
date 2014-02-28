@@ -50,7 +50,7 @@ etchosts::csc:
     - '10.40.20.87  csc-wn37.saas.local csc-wn37'
   'Jetty Nodes':
     - '10.40.20.15  csc-jetty-0.saas.local csc-jetty-0'
-    - '10.40.20.16  csc-jetty-1.saas.local csc-jetty-1'
+    - '10.40.20.16  csc-jetty-1.saas.local csc-jetty-1 pentaho'
     - '10.40.20.17  csc-jetty-2.saas.local csc-jetty-2'
   'Windows Nodes':
     - '10.40.20.10  csc-portal-0.csc.saas.local csc-portal-0'
