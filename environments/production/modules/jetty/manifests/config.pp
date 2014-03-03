@@ -34,13 +34,13 @@ class jetty::config {
     require => Class['jetty::package'],
   }
 
-  file { '/webservices/jetty/etc/jetty-jmx.xml':
-    ensure  => 'present',
-    owner   => 'cscprod',
-    group   => 'cscprod',
-    mode    => '0644',
-    source  => 'puppet:///modules/jetty/jetty-jmx.xml',
-    require => Class['jetty::package'],
-  }
+  #  file { '/webservices/jetty/etc/jetty-jmx.xml':
+  #  ensure  => 'present',
+  #  owner   => 'cscprod',
+  #  group   => 'cscprod',
+  #  mode    => '0644',
+  #  source  => 'puppet:///modules/jetty/jetty-jmx.xml',
+  #  require => Class['jetty::package'],
+  #}
 
 }
