@@ -285,6 +285,11 @@ class profile::mcollective-server {
   mcollective::plugin { 'package':
     package => true,
   }
+
+  mcollective::plugin { 'filemgr':
+    package => true,
+  }
+
 }
 
 class profile::mcollective-client {
@@ -307,6 +312,10 @@ class profile::mcollective-client {
   }
 
   mcollective::plugin { 'package':
+    package => true,
+  }
+
+  mcollective::plugin { 'filemgr':
     package => true,
   }
 
