@@ -1,3 +1,4 @@
 JETTY_HOME=/webservices/jetty
 JETTY_USER=cscprod
 JAVA_OPTIONS="-XX:PermSize=128m -XX:MaxPermSize=384m -XX:+CMSClassUnloadingEnabled -Xms2048m -Xmx3584m"
+JETTY_ARGS="OPTIONS=Server,jmx etc/jetty-jmx.xml"

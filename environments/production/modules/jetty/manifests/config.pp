@@ -23,6 +23,7 @@ class jetty::config {
     mode    => '0644',
     source  => 'puppet:///modules/jetty/jetty',
     require => Class['jetty::package'],
+    notify  => Class['jetty::service'],
   }
 
   file { '/etc/rc.d/init.d/jetty':
