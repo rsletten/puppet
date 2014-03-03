@@ -34,7 +34,7 @@ class jetty::config {
     require => Class['jetty::package'],
   }
 
-  file { '/webservices/jetty/jetty-jmx.xml':
+  file { '/webservices/jetty/etc/jetty-jmx.xml':
     ensure  => 'present',
     owner   => 'cscprod',
     group   => 'cscprod',
