@@ -36,6 +36,12 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class func {
+  class { '::func::package': } ->
+  class { '::func::config': } ->
+  class { '::func::service': } ->
+  Class['func']
+}
+
 
 
 }
