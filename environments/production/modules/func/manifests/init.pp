@@ -41,7 +41,3 @@ class func {
   class { '::func::service': } ->
   Class['func']
 }
-
-
-
-}

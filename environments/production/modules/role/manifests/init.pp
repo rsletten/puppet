@@ -24,6 +24,7 @@ class role::nonhadoop {
   include profile::xwindows
   include camstar::accounts
   include ganglia
+  include func
   include openipmi
   include profile::mcollective-client
 }
@@ -39,6 +40,7 @@ class role::virtual {
   include profile::xwindows
   include camstar::accounts
   include ganglia
+  include func
   include profile::mcollective-client
 }
 
