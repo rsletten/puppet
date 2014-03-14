@@ -210,6 +210,47 @@ class camstar::users {
 
 }
 
+class camstar::cvr {
+
+   @group { 'ddelosreyes':
+     gid    => '2010',
+     ensure => present,
+   }
+
+   @user { 'ddelosreyes':
+     uid        => '2010',
+     gid        => '2010',
+     shell      => '/bin/bash',
+     home       => '/home/ddelosreyes',
+     managehome => true,
+     password   => '$6$lTgd5IJp$8LKt8cpXnU1haXXl7h9dGoL4McRsnSJWt8qjZlbXFeOYkcyPa4nWCtdhXJ38n6uhT3LeiiCkLFKb7v1gZhP6N0',
+     comment    => 'Dale',
+     ensure     => present,
+   }
+
+   @group { 'wsingbeil':
+     gid    => '2011',
+     ensure => present,
+   }
+
+   @user { 'wsingbeil':
+     uid        => '2011',
+     gid        => '2011',
+     shell      => '/bin/bash',
+     home       => '/home/wsingbeil',
+     managehome => true,
+     password   => '$6$JGc0yDto$gSnVbvrWUwbyZ1FWAYvyvpS9.OSbR50taF3cTz8/eUaz2CQG8emW/h9I2CrnaIL9s.R7.rH.tdXsNXQuEsfGT/',
+     comment    => 'Wayne',
+     ensure     => present,
+   }
+
+  realize(Group['ddelosreyes'])
+  realize(Group['wsingbeil'])
+  realize(User['ddelosreyes'])
+  realize(User['wsingbeil'])
+
+}
+
 class camstar::accounts {
   require camstar::users
   realize(Group['rsletten'])

@@ -192,6 +192,7 @@ node 'csc-jetty-1.saas.local' {
   include jetty
   include nginx
   include pentaho
+  include camstart::cvr
 }
 
 node 'csc-jetty-2.saas.local' {
